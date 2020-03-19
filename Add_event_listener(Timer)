@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADDEVENT</title>
+</head>
+<body>
+	<p>To get date and stop watch click here</p>
+	<button id="demo">STOP WATCH</button>
+	<p id="d"></p>
+	<p id="d2"></p>
+	<button onclick="clearInterval(s)">stop</button>
+	<script type="text/javascript">
+		document.getElementById('demo').addEventListener("click",displayDt)
+		document.getElementById('demo').addEventListener("click",stopwatch)
+			function displayDt() {
+			var d=document.getElementById("d").innerHTML=Date()
+			alert(d)}
+			function stopwatch(){
+				 s=setInterval(timer,1000)
+				function timer()
+				{
+					var d=new Date()
+					document.getElementById("d2").innerHTML=d.toLocaleTimeString();
+				}
+			}
+		
+	</script>
+
+</body>
+</html>
