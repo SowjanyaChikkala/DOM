@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MOUSE CAN SPEAK</title>
+</head>
+<body>
+<button id="bt">Button</button>
+<p id="demo"></p>
+<script type="text/javascript">
+	var x=document.getElementById('bt')
+	x.addEventListener("mouseover",over)
+	x.addEventListener("mouseout",out)
+	x.addEventListener("click",crazy)
+	
+	function over() {
+		document.getElementById("demo").innerHTML="I on button"// body...
+	}
+	function out() {
+		document.getElementById("demo").innerHTML="I am away from button"// body...
+	}
+	function crazy() {
+		document.getElementById("demo").innerHTML="clicked!"// body...
+	}
+</script>
+</body>
+</html>
