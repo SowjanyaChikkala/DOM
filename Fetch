@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FETCH</title>
+</head>
+<body>
+<button id="bt1">get</button>
+<button id="bt2">send</button>
+<script type="text/javascript">
+	var b=document.getElementById("bt1")
+function getData()
+{
+fetch("http://dummy.restapiexample.com/api/v1/employees").then(response=>{console.log(response)})
+}
+b.addEventListener("click",getData)
+</script>
+</body>
+</html>
