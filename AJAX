@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Please open console to get data.
+<button id="bt1">get</button>
+<button id="bt2">send</button>
+<script type="text/javascript">
+	var st = document.getElementById("bt1")
+var st2=document.getElementById("bt2")
+function ret()
+{
+var s= new XMLHttpRequest();
+s.open("GET","http://dummy.restapiexample.com/api/v1/employees" , true);
+s.onload=() =>
+{
+var d= s.responseText;
+console.log(d);
+//console.log(s.responseXML)
+//console.log(s.responseHTML)
+console.log(s.statusText)
+var d2=JSON.parse(d)
+console.log(d2);
+console.log(s.status)}
+s.send();
+}
+st.addEventListener("click",ret);
+function sending()
+{
+var s= new XMLHttpRequest();
+s.open("POST","http://dummy.restapiexample.com/api/v1/create" , {
+id:23,
+employee_name:"sowji",
+emoployee_salary:123456789,
+employee_age:23,
+profile_img:""
+})}
+st2.addEventListener("click" ,sending);
+</script>
+</body>
+</html>
