@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>Student Details</h1>
+	<form id='form1'>
+	NAME    :<input type="text" id="name"><br><br>
+	ROLL NO:<input type="text" id="no"><br><br>
+	<input type="submit" value="submit" onclick="data()">
+	<input type="button" value="reset" onclick="delet()">
+	<script type="text/javascript">
+		function data(){
+			var x=document.getElementById("name").value;
+			var y=document.getElementById("no").value;
+			if(x.length&&y.length)
+			{
+				document.write(x+"<br>");
+			document.write(y);
+			}
+		else
+		{
+			alert("please enter details")
+    }
+    }
+      function delet(){
+			document.getElementById("form1").reset();
+			
+		}
+	</script>
+	</form>
+	</body>
+</html>
