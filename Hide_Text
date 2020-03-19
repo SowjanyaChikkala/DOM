@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HIDE</title>
+</head>
+<body>
+Name:<input type="text" id="name"><br><br>
+User Id:<input type="text" id="p"><br><br>
+<button type="buttons"  onclick="document.getElementById('p').style.visibility='hidden'">hide</button>
+<button type="button"  onclick="document.getElementById('p').style.visibility='visible'">show</button>
+</body>
+</html>
